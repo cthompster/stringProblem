@@ -1,0 +1,24 @@
+public class RemoveCharacter
+{ 
+  public static void main(String[] args)
+  {
+     String inputStr = "this is some text";
+     String[] stringArr = inputStr.split(" ");
+     char charToRemove = 's';
+     for(String inputStr : stringArr)
+     {
+      System.out.print(remove(inputStr, charToRemove) + " ");
+     }  
+  }
+  public static String remove(String a, char b)
+    {
+      if(!a.contains(b))
+      {
+        return a;
+      }
+      String newString = "";
+      newString = a.substring(0, a.indexOf(b))+""+a.substring(a.indexOf(b)+1);
+      return newString;
+    }
+  System.out.print("This is your new string, " + newString);
+}
