@@ -2,9 +2,9 @@ public class RemoveCharacter
 { 
   public static void main(String[] args)
   {
-     String inputStr = "this is some text";
+     String inputStr = "my secret message";
      String[] stringArr = inputStr.split(" ");
-     char charToRemove = 's';
+     char charToRemove = 'm';
      for(String inputStr : stringArr)
      {
       System.out.print(remove(inputStr, charToRemove) + " ");
