@@ -7,6 +7,10 @@ import java.util.Objects;
  *
  * <p>Both methods are case-sensitive and return a new string; the input is never changed.
  * A {@code null} input is rejected with a {@link NullPointerException}.
+ *
+ * <p>Both work on single {@code char}s, so they can't remove a character outside the Basic
+ * Multilingual Plane, such as an emoji, which Java stores as two {@code char}s (a surrogate
+ * pair). Passing one half of such a pair removes only that half and leaves the other behind.
  */
 public final class RemoveCharacter {
 

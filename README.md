@@ -24,6 +24,7 @@ A Java 17 Maven project tested with JUnit 5.
 | `src/test/java/stringproblem/RemoveWithReplaceTest.java` | Runs every case against solution 2 |
 
 Both methods are case-sensitive, return a new string, and throw `NullPointerException` for a `null` string.
+They work on single `char`s, so they can't remove an emoji or another character that Java stores as two `char`s.
 
 **Positive cases:** every instance is removed, including the first or last character, consecutive repeats,
 a string made only of that character, spaces, regex characters such as `.` and `$`, and non-ASCII
@@ -39,5 +40,5 @@ Requires JDK 17+ and Maven. From the project folder:
 mvn test
 ```
 
-Expected: `Tests run: 36, Failures: 0, Errors: 0, Skipped: 0` (18 per solution).
+Expected: `Tests run: 34, Failures: 0, Errors: 0, Skipped: 0` (17 per solution).
 

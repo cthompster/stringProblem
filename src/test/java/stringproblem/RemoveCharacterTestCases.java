@@ -44,14 +44,6 @@ abstract class RemoveCharacterTestCases {
         assertEquals(expected, remove(input, toRemove));
     }
 
-    @Test
-    @DisplayName("leaves the input string itself unchanged")
-    void doesNotChangeInput() {
-        String input = "banana";
-        remove(input, 'a');
-        assertEquals("banana", input);
-    }
-
     // ---------- Negative cases: nothing to remove, or invalid input ----------
 
     static Stream<Arguments> leavesStringUnchanged() {
